@@ -1,0 +1,7 @@
+[32mINFO    [0m WDM:logger.py:22 
+
+[32mINFO    [0m WDM:logger.py:12 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:12 Current google-chrome version is 96.0.4664
+[32mINFO    [0m WDM:logger.py:12 Get LATEST driver version for 96.0.4664
+[32mINFO    [0m WDM:logger.py:12 Driver [/Users/dvurechenskiy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
+[32mINFO    [0m BrowserLogger:conftest.py:95 Browser <function browser at 0x10e6135e0> started
