@@ -68,3 +68,5 @@ class Base:
         except TimeoutException:
             raise AssertionError(f'{locator} not clickable')
         return element
+
+# test branch
