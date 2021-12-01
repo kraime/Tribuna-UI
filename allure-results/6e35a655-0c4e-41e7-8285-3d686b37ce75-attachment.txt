@@ -1,6 +1,0 @@
-
-
-====== WebDriver manager ======
-Current google-chrome version is 96.0.4664
-Get LATEST driver version for 96.0.4664
-Driver [/Users/dvurechenskiy/.wdm/drivers/chromedriver/mac64/96.0.4664.45/chromedriver] found in cache
