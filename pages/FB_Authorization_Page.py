@@ -64,7 +64,7 @@ class FB_Authorization_Page(Base):
     @step
     def check_autorization_user_name(self):
         user_name = self._find_element(TribunaPageLocators.USER_BLOCK_NAME)
-        assert user_name.text == 'Pushmaster'
+        assert user_name.text == 'PushmasteR'
 
 
 
