@@ -1,5 +1,6 @@
 import logging
 import time
+import pytest
 from allure import step
 from pages.base import Base
 from locators.Tribuna import TribunaPageLocators
@@ -11,6 +12,7 @@ from utils.constants import FB_CORRECT_EMAIL, FB_CORRECT_PASS
 # from selenium.webdriver.support import expected_conditions as EC
 # # from selenium.common.exceptions import TimeoutException
 
+@pytest.mark.incremental
 class FB_Authorization_Page(Base):
     path = "/"
 

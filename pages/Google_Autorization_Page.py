@@ -1,5 +1,6 @@
 import logging
 import time
+import pytest
 from allure import step
 from pages.base import Base
 from locators.Tribuna import TribunaPageLocators
@@ -7,10 +8,7 @@ from locators.Google import GooglePageLocators
 from utils.constants import GMAIL_CORRECT_EMAIL, GMAIL_CORRECT_PASS
 
 
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# # from selenium.common.exceptions import TimeoutException
-
+@pytest.mark.incremental
 class Gmail_Authorization_Page(Base):
     path = "/"
 

@@ -1,5 +1,6 @@
 import logging
 import time
+import pytest
 from allure import step
 from pages.base import Base
 from locators.Tribuna import TribunaPageLocators
@@ -8,6 +9,7 @@ from utils.constants import FB_CORRECT_EMAIL, FB_CORRECT_PASS
 from selenium.webdriver.support.ui import WebDriverWait
 
 
+@pytest.mark.incremental
 class News_Page(Base):
     path = "/en/news/realmadrid-2021-12-01-vinicius-reveals-his-closest-friend-at-real-madrid/"
 
