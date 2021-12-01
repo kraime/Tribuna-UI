@@ -6,11 +6,10 @@ from locators.Tribuna import TribunaPageLocators
 from locators.Facebook import FacebookPageLocators
 from utils.constants import FB_CORRECT_EMAIL, FB_CORRECT_PASS
 from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# # from selenium.common.exceptions import TimeoutException
+
 
 class News_Page(Base):
-    path = "/en/news/football-2021-11-30-pele-reacts-to-lionel-messi-winning-2021-ballon-dor/"
+    path = "/en/news/realmadrid-2021-12-01-vinicius-reveals-his-closest-friend-at-real-madrid/"
 
     @step
     def open_news_page(self):
@@ -30,7 +29,6 @@ class News_Page(Base):
         auth_block = self._wait_element_to_be_clickable(TribunaPageLocators.AUTH_BLOCK)
         auth_block.click()
         time.sleep(3)
-
 
     @step
     def click_to_fb_button(self):
@@ -70,7 +68,7 @@ class News_Page(Base):
 
     @step
     def scroll_down_page(self):
-        self.browser.execute_script("window.scrollTo(0, window.scrollY + 5000)")
+        self.browser.execute_script("window.scrollTo(0, window.scrollY + 6000)")
         time.sleep(5)
 
     @step
