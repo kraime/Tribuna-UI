@@ -133,3 +133,4 @@ dmypy.json
 .idea/
 drivers/
 *.png
+.DS_Store
