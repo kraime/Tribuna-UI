@@ -11,3 +11,7 @@ class TribunaPageLocators:
     TEXT_AREA_COMMENTS = (By.CLASS_NAME, "comments-form__textarea")
     SEND_COMMENT = (By.CLASS_NAME, "comments-form__btn")
     CHECK_COMMENT = (By.CLASS_NAME, "comments__text")
+    CLOSE_CATFISH = (By.CLASS_NAME, "banner__annotation--icon")
+    USER_POST_OPTIONS = (By.CLASS_NAME, "user-post-header__options")
+    USER_DELETE_POST_OPTION = (By.CLASS_NAME, "header-options-menu__option")
+    DELETE_BUTTON = (By.CLASS_NAME, "SOME_CLASS_BUTTON")

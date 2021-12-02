@@ -7,11 +7,12 @@ from locators.Tribuna import TribunaPageLocators
 from locators.Facebook import FacebookPageLocators
 from utils.constants import FB_CORRECT_EMAIL, FB_CORRECT_PASS
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 @pytest.mark.incremental
 class News_Page(Base):
-    path = "/en/news/realmadrid-2021-12-01-vinicius-reveals-his-closest-friend-at-real-madrid/"
+    path = "/en/news/realmadrid-2021-12-01-hazards-problem-is-not-mental-ancelotti-opens-up-on-hazards/"
 
     @step
     def open_news_page(self):
@@ -70,8 +71,14 @@ class News_Page(Base):
 
     @step
     def scroll_down_page(self):
-        self.browser.execute_script("window.scrollTo(0, window.scrollY + 6000)")
-        time.sleep(5)
+        self.browser.execute_script("window.scrollTo(0, window.scrollY + 5700)")
+        time.sleep(3)
+
+    @step
+    def close_catfish_banner(self):
+        adv_close = self._find_element(TribunaPageLocators.CLOSE_CATFISH)
+        adv_close.click()
+        time.sleep(3)
 
     @step
     def click_to_show_comments(self):
@@ -80,11 +87,15 @@ class News_Page(Base):
         time.sleep(3)
 
     @step
+    def scroll_down_page_more(self):
+        self.browser.execute_script("window.scrollTo(0, window.scrollY + 500)")
+
+    @step
     def input_text_comment(self):
         text_comment = self._wait_element_to_be_clickable(TribunaPageLocators.TEXT_AREA_COMMENTS)
         text_comment.clear()
         text_comment.click()
-        self._input_text(text_comment, "Good news!")
+        self._input_text(text_comment, "Good news")
         time.sleep(3)
 
     @step
@@ -96,4 +107,20 @@ class News_Page(Base):
     @step
     def check_comment_in_the_field(self):
         check_comment = self._find_element(TribunaPageLocators.CHECK_COMMENT)
-        assert check_comment.text == 'Good news!'
+        assert check_comment.text == 'Good news'
+
+    @step
+    def click_to_user_posts_options(self):
+        comments_button = self._wait_element_to_be_clickable(TribunaPageLocators.USER_POST_OPTIONS)
+        comments_button.click()
+        time.sleep(2)
+
+    @step
+    def choose_delete_option(self):
+        delete_option = self._find_elements(TribunaPageLocators.USER_DELETE_POST_OPTION)
+        delete_option[2].click()
+        time.sleep(3)
+
+    def confirm_alert_delete_post(self):
+        del_button = self._wait_element_to_be_clickable(TribunaPageLocators.DELETE_BUTTON)
+        del_button.click()
