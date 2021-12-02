@@ -97,3 +97,9 @@ class News_Page(Base):
     def check_comment_in_the_field(self):
         check_comment = self._find_element(TribunaPageLocators.CHECK_COMMENT)
         assert check_comment.text == 'Good news!'
+
+    @step
+    def press_like_button_at_news(self):
+        like_button = self._find_element(TribunaPageLocators.LIKE_BUTTON_AT_NEWS)
+        like_button.click()
+        time.sleep(3)

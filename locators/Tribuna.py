@@ -11,3 +11,4 @@ class TribunaPageLocators:
     TEXT_AREA_COMMENTS = (By.CLASS_NAME, "comments-form__textarea")
     SEND_COMMENT = (By.CLASS_NAME, "comments-form__btn")
     CHECK_COMMENT = (By.CLASS_NAME, "comments__text")
+    LIKE_BUTTON_AT_NEWS = (By.CLASS_NAME, "user-post-footer__thumb-up")
