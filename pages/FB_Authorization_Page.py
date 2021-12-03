@@ -1,14 +1,18 @@
 import logging
 import time
+import pytest
 from allure import step
 from pages.base import Base
 from locators.Tribuna import TribunaPageLocators
 from locators.Facebook import FacebookPageLocators
 from utils.constants import FB_CORRECT_EMAIL, FB_CORRECT_PASS
+
+
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
 # # from selenium.common.exceptions import TimeoutException
 
+@pytest.mark.incremental
 class FB_Authorization_Page(Base):
     path = "/"
 
@@ -30,7 +34,6 @@ class FB_Authorization_Page(Base):
         auth_block = self._wait_element_to_be_clickable(TribunaPageLocators.AUTH_BLOCK)
         auth_block.click()
         time.sleep(3)
-
 
     @step
     def click_to_fb_button(self):
@@ -64,8 +67,4 @@ class FB_Authorization_Page(Base):
     @step
     def check_autorization_user_name(self):
         user_name = self._find_element(TribunaPageLocators.USER_BLOCK_NAME)
-        assert user_name.text == 'Pushmaster'
-
-
-
-
+        assert user_name.text == 'Pushmaster!'

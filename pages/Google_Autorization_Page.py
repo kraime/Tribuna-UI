@@ -1,14 +1,14 @@
 import logging
 import time
+import pytest
 from allure import step
 from pages.base import Base
 from locators.Tribuna import TribunaPageLocators
 from locators.Google import GooglePageLocators
 from utils.constants import GMAIL_CORRECT_EMAIL, GMAIL_CORRECT_PASS
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# # from selenium.common.exceptions import TimeoutException
 
+
+@pytest.mark.incremental
 class Gmail_Authorization_Page(Base):
     path = "/"
 
@@ -31,7 +31,6 @@ class Gmail_Authorization_Page(Base):
         auth_block.click()
         time.sleep(3)
 
-
     @step
     def click_to_gmail_button(self):
         gmail_button = self._find_element(TribunaPageLocators.GMAIL_BUTTON)
@@ -52,12 +51,10 @@ class Gmail_Authorization_Page(Base):
         gmail_login = self._wait_element_to_be_clickable(GooglePageLocators.GMAIL_LOGIN)
         self._input_text(gmail_login, GMAIL_CORRECT_EMAIL)
 
-
     @step
     def fill_gmail_pass(self):
         gmail_pass = self._wait_element_to_be_clickable(GooglePageLocators.GMAIL_PASSWORD)
         self._input_text(gmail_pass, GMAIL_CORRECT_PASS)
-
 
     @step
     def click_to_gmail_next_button(self):
@@ -75,7 +72,3 @@ class Gmail_Authorization_Page(Base):
     def check_autorization_gmail_user_name(self):
         gmail_user_name = self._find_element(TribunaPageLocators.USER_BLOCK_NAME)
         assert gmail_user_name.text == 'Test Tribuna'
-
-
-
-
