@@ -1,0 +1,20 @@
+image: python:3.7.6-alpine
+stages:
+  - test
+
+variables:
+  BROWSER: chrome
+
+.job_template:
+  before_script:
+    - pip3 install -r requirements.txt
+  script:
+    - pytest --browser=$BROWSER --local='false'
+
+e2e:remote:chrome:
+  extends: .job_template
+  services:
+    - selenium/standalone-chrome
+  only:
+    variables:
+      - $BROWSER == 'chrome'
