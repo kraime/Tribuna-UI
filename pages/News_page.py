@@ -110,6 +110,12 @@ class News_Page(Base):
         assert check_comment.text == 'Good news'
 
     @step
+    def press_like_button_at_news(self):
+        like_button = self._find_element(TribunaPageLocators.LIKE_BUTTON_AT_NEWS)
+        like_button.click()
+        time.sleep(3)
+
+    @step
     def click_to_user_posts_options(self):
         comments_button = self._wait_element_to_be_clickable(TribunaPageLocators.USER_POST_OPTIONS)
         comments_button.click()
@@ -124,3 +130,4 @@ class News_Page(Base):
     def confirm_alert_delete_post(self):
         del_button = self._wait_element_to_be_clickable(TribunaPageLocators.DELETE_BUTTON)
         del_button.click()
+
