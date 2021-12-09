@@ -17,4 +17,4 @@ class TribunaPageLocators:
     USER_DELETE_POST_OPTION = (By.CLASS_NAME, "header-options-menu__option")
     DELETE_BUTTON = (By.CLASS_NAME, "SOME_CLASS_BUTTON")
     DROPDOWN_MENU = (By.CLASS_NAME, "DropdownMenu_menu-container__selected-item--arrow-icon-wrapper__7JE0_")
-    DROPDOWN_LANG_FR = (By.CLASS_NAME, "DropdownMenu_menu-container__item__JcBCu")
+    DROPDOWN_LANG = (By.CLASS_NAME, "DropdownMenu_menu-container__item__JcBCu")

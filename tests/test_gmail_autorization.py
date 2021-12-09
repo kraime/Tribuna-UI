@@ -1,6 +1,6 @@
 import pytest
 # from pages.AuthorizationPage import Faker
-from pages.Google_Autorization_Page import Gmail_Authorization_Page
+from pages.Google_Autorization_Page import GmailAuthorizationPage
 import allure
 from allure import step
 
@@ -8,7 +8,7 @@ from allure import step
 @allure.feature('Авторизация с помощью Gmail на Главной странице')
 @allure.title('Авторизация с помощью Gmail на Главной странице')
 def test_gmail_autorization(browser):
-    tribuna_page = Gmail_Authorization_Page(browser)
+    tribuna_page = GmailAuthorizationPage(browser)
     with step("Открывает Главную страницу Tribuna.com"):
         tribuna_page.open_authorization_page()
     with step("Закрывает рекламный баннер на Главной странице"):

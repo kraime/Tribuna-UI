@@ -9,7 +9,7 @@ from utils.constants import GMAIL_CORRECT_EMAIL, GMAIL_CORRECT_PASS
 
 
 @pytest.mark.incremental
-class Gmail_Authorization_Page(Base):
+class GmailAuthorizationPage(Base):
     path = "/"
 
     @step

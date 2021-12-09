@@ -13,7 +13,7 @@ from utils.constants import FB_CORRECT_EMAIL, FB_CORRECT_PASS
 # # from selenium.common.exceptions import TimeoutException
 
 @pytest.mark.incremental
-class FB_Authorization_Page(Base):
+class FBAuthorizationPage(Base):
     path = "/"
 
     @step
@@ -67,4 +67,4 @@ class FB_Authorization_Page(Base):
     @step
     def check_autorization_user_name(self):
         user_name = self._find_element(TribunaPageLocators.USER_BLOCK_NAME)
-        assert user_name.text == 'Pushmaster!'
+        assert user_name.text == 'Pushmaster'

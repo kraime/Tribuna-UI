@@ -1,6 +1,6 @@
 import pytest
 # from pages.AuthorizationPage import Faker
-from pages.FB_Authorization_Page import FB_Authorization_Page
+from pages.FB_Authorization_Page import FBAuthorizationPage
 import allure
 from allure import step
 
@@ -8,7 +8,7 @@ from allure import step
 @allure.feature('Авторизация с помощью Facebook на Главной странице')
 @allure.title('Авторизация с помощью Facebook на Главной странице')
 def test_fb_autorization(browser):
-    tribuna_page = FB_Authorization_Page(browser)
+    tribuna_page = FBAuthorizationPage(browser)
     with step("Открывает Главную страницу Tribuna.com"):
         tribuna_page.open_authorization_page()
     with step("Закрывает рекламный баннер на Главной странице"):

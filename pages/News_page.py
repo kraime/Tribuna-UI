@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 @pytest.mark.incremental
-class News_Page(Base):
+class NewsPage(Base):
     path = "/en/news/realmadrid-2021-12-01-hazards-problem-is-not-mental-ancelotti-opens-up-on-hazards/"
 
     @step

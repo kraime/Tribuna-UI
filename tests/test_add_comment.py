@@ -1,6 +1,6 @@
 import pytest
 # from pages.AuthorizationPage import Faker
-from pages.News_page import News_Page
+from pages.News_page import NewsPage
 import allure
 from allure import step
 
@@ -8,7 +8,7 @@ from allure import step
 @allure.feature('Открытие новостной страницы Трибуны')
 @allure.title('Добавление комментария на страницу новости')
 def test_add_comment_on_news_page(browser):
-    tribuna_page = News_Page(browser)
+    tribuna_page = NewsPage(browser)
     with step("Открывает Главную страницу Tribuna.com"):
         tribuna_page.open_news_page()
     with step("Закрывает рекламный баннер на Главной странице"):

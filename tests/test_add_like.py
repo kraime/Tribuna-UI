@@ -1,7 +1,7 @@
 # from pages.AuthorizationPage import Faker
 import pytest
 # from pages.AuthorizationPage import Faker
-from pages.News_page import News_Page
+from pages.News_page import NewsPage
 import allure
 from allure import step
 
@@ -9,7 +9,7 @@ from allure import step
 @allure.feature('Проставление лайка на странице новости')
 @allure.title('Проставление лайка на странице новости')
 def test_fb_autorization(browser):
-    tribuna_page = News_Page(browser)
+    tribuna_page = NewsPage(browser)
     with step("Открывает Главную страницу Tribuna.com"):
         tribuna_page.open_news_page()
     with step("Закрывает рекламный баннер на Главной странице"):
