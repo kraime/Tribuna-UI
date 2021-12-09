@@ -33,8 +33,8 @@ class Gmail_Authorization_Page(Base):
 
     @step
     def click_to_gmail_button(self):
-        gmail_button = self._find_element(TribunaPageLocators.GMAIL_BUTTON)
-        gmail_button.click()
+        gmail_button = self._find_elements(TribunaPageLocators.GMAIL_BUTTON)
+        gmail_button[1].click()
         time.sleep(3)
 
     @step

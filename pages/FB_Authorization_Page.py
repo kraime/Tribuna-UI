@@ -37,8 +37,8 @@ class FB_Authorization_Page(Base):
 
     @step
     def click_to_fb_button(self):
-        fb_button = self._find_element(TribunaPageLocators.FB_BUTTON)
-        fb_button.click()
+        fb_button = self._find_elements(TribunaPageLocators.FB_BUTTON)
+        fb_button[0].click()
         time.sleep(3)
 
     @step

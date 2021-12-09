@@ -9,22 +9,22 @@ from allure import step
 @allure.feature('Проставление лайка на странице новости')
 @allure.title('Проставление лайка на странице новости')
 def test_fb_autorization(browser):
-    authorization_page = News_Page(browser)
+    tribuna_page = News_Page(browser)
     with step("Открывает Главную страницу Tribuna.com"):
-        authorization_page.open_news_page()
+        tribuna_page.open_news_page()
     with step("Закрывает рекламный баннер на Главной странице"):
-        authorization_page.close_advertiser_fullscreen()
+        tribuna_page.close_advertiser_fullscreen()
     with step("Производится клик по блоку авторизации в хеддере"):
-        authorization_page.click_to_auth_block()
+        tribuna_page.click_to_auth_block()
     with step("Производится клик по кнопке авторизации через Facebook"):
-        authorization_page.click_to_fb_button()
+        tribuna_page.click_to_fb_button()
     with step("Происходит переключение на окно авторизации Facebook"):
-        authorization_page.switch_to_fb_window()
+        tribuna_page.switch_to_fb_window()
     with step("Происходит заполнение данных авторизации Facebook"):
-        authorization_page.fill_fb_credentionals()
+        tribuna_page.fill_fb_credentionals()
     with step("Клик по кнопке Вход Facebook"):
-        authorization_page.click_to_fb_enter()
+        tribuna_page.click_to_fb_enter()
     with step("Происходит переключение на окно Tribuna.com"):
-        authorization_page.switch_to_tribuna_body()
+        tribuna_page.switch_to_tribuna_body()
     with step("Проставление лайка новости"):
-        authorization_page.press_like_button_at_news()
+        tribuna_page.press_like_button_at_news()
